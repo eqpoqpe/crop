@@ -1,0 +1,11 @@
+#root {
+    width: inherit;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.App {
+    width: inherit;
+    height: inherit;
+}
