@@ -5,11 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-function App(): JSX.Element {
+import { classNameConcat } from "@eqpoqpe/classname-utils";
+
+function AppBar(): JSX.Element {
   return (
-    <>
-    </>
+    <div className={classNameConcat(["w-full"])}></div>
   );
 }
 
-export default App;
+export default AppBar;
