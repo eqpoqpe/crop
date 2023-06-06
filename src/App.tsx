@@ -5,12 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { lazy } from "react";
 import { ControllerModeProvider } from "./app/provider/ControllerModeProvider";
 import AppBar from "./components/AppBar";
 import Bound from "./components/Bound";
 import Controller from "./components/Controller";
 import MouseBlock from "./components/MouseBlock";
-import ScrollBlock from "./components/ScrollBlock";
+
+const ScrollBlock = lazy(() => import("./components/ScrollBlock"));
 
 function App(): JSX.Element {
   return (

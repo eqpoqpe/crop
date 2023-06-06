@@ -24,7 +24,8 @@ function Switch(props: SwitchProps): JSX.Element {
         "items-center",
         isOn ? "justify-end" : "justify-start",
         "box-sizing",
-        "p-[2px]"
+        "p-[2px]",
+        "cursor-pointer"
       ])}
       onClick={onClick}
     >

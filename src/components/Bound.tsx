@@ -1,5 +1,5 @@
 import { classNameConcat } from "@eqpoqpe/classname-utils";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, Suspense } from "react";
 
 function Bound(props: PropsWithChildren): JSX.Element {
   const { children } = props;
@@ -16,7 +16,9 @@ function Bound(props: PropsWithChildren): JSX.Element {
       "z-20"
     ])}
     >
-      {children}
+      <Suspense>
+        {children}
+      </Suspense>
     </div>
   );
 }
