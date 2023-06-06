@@ -27,6 +27,7 @@ function ScrollBlock(): JSX.Element {
         "md:h-[360px]",
         isDanceMode ? "animate-bounce" : ""
       ])}
+      draggable={false}
       onTouchStart={(event) => {
         const clientX = event.touches?.[0].clientX;
         const clientY = event.touches?.[0].clientY;
