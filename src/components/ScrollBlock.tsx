@@ -19,7 +19,6 @@ function ScrollBlock(): JSX.Element {
       className={classNameConcat([
         "w-[200px]",
         "h-[200px]",
-        "p-3",
         "bg-pink-400",
         "transition-all",
         "duration-700",

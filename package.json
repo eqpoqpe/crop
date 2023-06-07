@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@eqpoqpe/classname-utils": "^0.1.6",
+    "@stitches/react": "^1.2.8",
     "framer-motion": "^10.12.16",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
