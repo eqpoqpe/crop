@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/app",
   build: {
-    manifest: true
+    manifest: true,
+    minify: "terser"
   }
 });
