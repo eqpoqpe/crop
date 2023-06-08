@@ -11,6 +11,7 @@ function AppBar(): JSX.Element {
         "bg-[#00000033]",
         "border-b-[1px]",
         "border-neutral-700",
+        "backdrop-blur-xl",
         "sticky",
         "top-0"
       ])}

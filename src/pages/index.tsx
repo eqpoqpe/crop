@@ -2,21 +2,22 @@ import { Outlet } from "react-router-dom";
 import AppBar from "../components/AppBar";
 import MainHero from "../components/marketing/MainHero";
 import FancyBackground from "../components/marketing/FancyBackground";
+import StandPage from "../components/StandPage";
 
 function MainContent(): JSX.Element {
   return (
-    <FancyBackground>
-      <MainHero />
-    </FancyBackground>
+    <MainHero />
   );
 }
 
 function Index(): JSX.Element {
   return (
-    <>
-      <AppBar />
-      <Outlet />
-    </>
+    <FancyBackground>
+      <StandPage>
+        <AppBar />
+        <Outlet />
+      </StandPage>
+    </FancyBackground>
   );
 }
 
