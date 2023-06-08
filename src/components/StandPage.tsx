@@ -11,8 +11,9 @@ function StandPage(props: PropsWithChildren): JSX.Element {
         "h-full",
         "absolute",
         "top-0",
-        "left-0"]
-      )}
+        "left-0",
+        "overflow-auto"
+      ])}
     >
       {children}
     </div>

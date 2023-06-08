@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 import Index, { MainContent } from "../../pages";
 import RebornPink from "../../pages/reborn-pink";
+import MoveFigure from "../../pages/move-figure";
 
 const routes: Array<RouteObject> = [
   {
@@ -15,6 +16,10 @@ const routes: Array<RouteObject> = [
       {
         path: "reborn-pink",
         element: createElement(RebornPink)
+      },
+      {
+        path: "move-figure",
+        element: createElement(MoveFigure)
       }
     ]
   }

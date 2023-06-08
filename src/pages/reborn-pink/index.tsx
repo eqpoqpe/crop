@@ -14,7 +14,6 @@ function RebornPink(): JSX.Element {
       </Bound>
       <MouseBlock />
       <Controller />
-      reborn-pink
     </div>
   );
 }

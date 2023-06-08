@@ -1,4 +1,6 @@
 import { classNameConcat } from "@eqpoqpe/classname-utils";
+import Box from "../Box";
+import SelectProject from "./SelectProject";
 
 function TextHero({ description }: { description: string }): JSX.Element {
   return (
@@ -12,12 +14,12 @@ function TextHero({ description }: { description: string }): JSX.Element {
     >
       <p
         className={classNameConcat([
-          "text-4xl",
+          "text-[40px]",
           "text-[#ffffffE6]",
           "font-sans",
           "leading-[56px]",
-          "md:leading-[96px]",
-          "md:text-7xl",
+          "md:leading-[114px]",
+          "md:text-[78px]",
           "whitespace-nowrap",
           "transition-all",
           "duration-300",
@@ -32,20 +34,39 @@ function TextHero({ description }: { description: string }): JSX.Element {
 
 function MainHero(): JSX.Element {
   return (
-    <div
+    <Box
       className={classNameConcat([
         "w-full",
-        "mt-20",
         "flex",
         "flex-col",
+        "justify-between",
         "items-center",
-        "overflow-hidden"
+        "overflow-hidden",
+        "box-sizing",
+        "pt-20",
       ])}
+      css={{
+        height: 654,
+        "@bph1": {
+          height: "calc(100vh - $appBarFefaultHeight)"
+        }
+      }}
     >
-      <TextHero description="UI/UX Experiments." />
-      <TextHero description="UI/UXの実験。" />
-      <TextHero description="UI/UX實驗。" />
-    </div>
+      <Box
+        className={classNameConcat([
+          "w-full",
+          "flex",
+          "flex-col",
+          "items-center",
+          "overflow-hidden"
+        ])}
+      >
+        <TextHero description="UI/UX Experiments." />
+        <TextHero description="UI/UXの実験。" />
+        <TextHero description="UI/UX實驗。" />
+      </Box>
+      <SelectProject />
+    </Box>
   );
 }
 

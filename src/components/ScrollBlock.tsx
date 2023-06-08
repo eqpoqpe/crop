@@ -43,7 +43,9 @@ function ScrollBlock(): JSX.Element {
         prevValue.resultX = prevValue.resultX + prevValue.upValueX - prevValue.downValueX;
         prevValue.resultY = prevValue.resultY + prevValue.upValueY - prevValue.downValueY;
 
-        scrollBlockRef.current!.style.transform = `translate(${prevValue.resultX + "px"}, ${prevValue.resultY + "px"})`;
+        scrollBlockRef.current!.style.transform = `
+          translate(${prevValue.resultX + "px"}, ${prevValue.resultY + "px"})
+        `;
       }}
       onMouseDown={(event) => {
         prevValue.downValueX = event.clientX;
@@ -55,7 +57,9 @@ function ScrollBlock(): JSX.Element {
         prevValue.resultX = prevValue.resultX + prevValue.upValueX - prevValue.downValueX;
         prevValue.resultY = prevValue.resultY + prevValue.upValueY - prevValue.downValueY;
 
-        scrollBlockRef.current!.style.transform = `translate(${prevValue.resultX + "px"}, ${prevValue.resultY + "px"})`;
+        scrollBlockRef.current!.style.transform = `
+          translate(${prevValue.resultX + "px"}, ${prevValue.resultY + "px"})
+        `;
       }}
       ref={scrollBlockRef}
     ></div>
