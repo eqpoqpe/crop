@@ -14,7 +14,7 @@ function TextHero({ description }: { description: string }): JSX.Element {
         className={classNameConcat([
           "text-4xl",
           "text-[#ffffffE6]",
-          "font-bold",
+          "font-sans",
           "leading-[56px]",
           "md:leading-[96px]",
           "md:text-7xl",
