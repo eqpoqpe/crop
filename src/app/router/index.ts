@@ -20,6 +20,10 @@ const routes: Array<RouteObject> = [
       {
         path: "move-figure",
         element: createElement(MoveFigure)
+      },
+      {
+        path: "limbo",
+        element: createElement("div")
       }
     ]
   }
