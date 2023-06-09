@@ -1,6 +1,7 @@
 import { classNameConcat } from "@eqpoqpe/classname-utils";
 import { css } from "@stitches/react";
 import { PropsWithChildren } from "react";
+import { motion } from "framer-motion";
 
 const background = css({
   width: "100vw",
@@ -23,10 +24,19 @@ function FancyBackground(props: PropsWithChildren): JSX.Element {
 
   return (
     <>
-      <div className={classNameConcat(["relative", "z-0", "w-full", "h-full"])}>
+      <motion.div
+        className={classNameConcat(["relative", "z-0", "w-full", "h-full"])}
+        initial={{ opacity: 0, scale: 0.5, rotate: 72 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+      >
         <div className={background()}>
         </div>
-      </div>
+      </motion.div>
       {children}
     </>
   );

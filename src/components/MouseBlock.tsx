@@ -1,32 +1,44 @@
 import { classNameConcat } from "@eqpoqpe/classname-utils";
-import { memo, useCallback, useEffect, useRef } from "react";
 import { detectMob } from "../app/util";
 
-const MouseBlock =  memo(function MouseBlock(): JSX.Element {
-  const mouseBlockRef = useRef<HTMLDivElement>(null);
-  const mouseVisibilityHandle = useCallback((event: MouseEvent) => {
-    const { clientX, clientY } = event;
+import { memo, useRef } from "react";
+import { motion } from "framer-motion";
+import { useFollowPointer } from "../app/hook/UseFollowPointer";
 
-    if (!detectMob()) {
-      setTimeout(() => {
-        mouseBlockRef.current!.style.visibility = "visible";
-      }, 300);
-
-      mouseBlockRef.current!.style.transform = `translate(${clientX + "px"}, ${clientY + "px"})`;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("mousemove", mouseVisibilityHandle, false);
-
-    return () => window.removeEventListener("mousemove", mouseVisibilityHandle);
-  }, []);
+const MouseBlock = memo(function MouseBlock(): JSX.Element {
+  const ref = useRef(null);
+  const { x, y } = useFollowPointer(ref);
 
   return (
-    <div
+    // <div
+    // className={classNameConcat([
+    //   "w-[90px]",
+    //   "h-[90px]",
+    //   "fixed",
+    //   "top-0",
+    //   "bg-[#ffffff1a]",
+    //   "backdrop-blur-xl",
+    //   "flex",
+    //   "justify-center",
+    //   "items-center",
+    //   "rounded-[50%]",
+    //   "text-white",
+    //   "text-sm",
+    //   "overflow-hidden",
+    //   "z-20"
+    // ])}
+    //   style={{
+    //     visibility: "hidden"
+    //   }}
+    //   ref={mouseBlockRef}
+    // >
+    //   <p className="rotate-12 whitespace-nowrap	">{"( move )"}</p>
+    // </div>
+    <motion.div
+      ref={ref}
       className={classNameConcat([
-        "w-[90px]",
-        "h-[90px]",
+        "w-[112px]",
+        "h-[112px]",
         "fixed",
         "top-0",
         "bg-[#ffffff1a]",
@@ -38,15 +50,19 @@ const MouseBlock =  memo(function MouseBlock(): JSX.Element {
         "text-white",
         "text-sm",
         "overflow-hidden",
-        "z-20"
+        "z-20",
+        "select-none"
       ])}
-      style={{
-        visibility: "hidden"
+      animate={{ x, y }}
+      transition={{
+        type: "just",
+        damping: 3,
+        stiffness: 50,
+        restDelta: 0.001
       }}
-      ref={mouseBlockRef}
     >
       <p className="rotate-12 whitespace-nowrap	">{"( move )"}</p>
-    </div>
+    </motion.div>
   );
 });
 

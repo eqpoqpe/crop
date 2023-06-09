@@ -1,6 +1,7 @@
 import { classNameConcat } from "@eqpoqpe/classname-utils";
 import Box from "../Box";
 import SelectProject from "./SelectProject";
+import { motion } from "framer-motion";
 
 function TextHero({ description }: { description: string }): JSX.Element {
   return (
@@ -12,22 +13,32 @@ function TextHero({ description }: { description: string }): JSX.Element {
         "duration-300"
       ])}
     >
-      <p
-        className={classNameConcat([
-          "text-[40px]",
-          "text-[#ffffffE6]",
-          "font-sans",
-          "leading-[56px]",
-          "md:leading-[114px]",
-          "md:text-[78px]",
-          "whitespace-nowrap",
-          "transition-all",
-          "duration-300",
-          "select-none"
-        ])}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
       >
-        {description}
-      </p>
+        <p
+          className={classNameConcat([
+            "text-[40px]",
+            "text-[#ffffffE6]",
+            "font-sans",
+            "leading-[56px]",
+            "md:leading-[114px]",
+            "md:text-[78px]",
+            "whitespace-nowrap",
+            "transition-all",
+            "duration-300",
+            "select-none"
+          ])}
+        >
+          {description}
+        </p>
+      </motion.div>
     </div>
   );
 }
