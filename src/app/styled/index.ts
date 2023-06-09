@@ -11,7 +11,7 @@ const { css, styled } = createStitches({
     bp1: "(min-width: 640px)",
     bp2: "(min-width: 768px)",
     bp3: "(min-width: 1024px)",
-    bph1: "(min-height: 654px)"
+    bph1: "(min-height: 610px)"
   },
 });
 

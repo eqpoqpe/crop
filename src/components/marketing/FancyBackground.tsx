@@ -4,10 +4,11 @@ import { PropsWithChildren } from "react";
 
 const background = css({
   width: "100vw",
-  minWidth: 1500,
+  minWidth: 1_500,
+  height: 900,
   left: "50%",
   transform: "translateX(-50%)",
-  position: "absolute",
+  position: "fixed",
   top: 0,
   bottom: 0,
   backgroundRepeat: "no-repeat",
