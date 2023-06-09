@@ -3,6 +3,7 @@ import { RouteObject, createBrowserRouter } from "react-router-dom";
 import Index, { MainContent } from "../../pages";
 import RebornPink from "../../pages/reborn-pink";
 import MoveFigure from "../../pages/move-figure";
+import Limbo from "../../pages/limbo";
 
 const routes: Array<RouteObject> = [
   {
@@ -23,7 +24,7 @@ const routes: Array<RouteObject> = [
       },
       {
         path: "limbo",
-        element: createElement("div")
+        element: createElement(Limbo)
       }
     ]
   }
