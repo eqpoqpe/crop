@@ -1,6 +1,4 @@
 import { classNameConcat } from "@eqpoqpe/classname-utils";
-import { detectMob } from "../app/util";
-
 import { memo, useRef } from "react";
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../app/hook/UseFollowPointer";
