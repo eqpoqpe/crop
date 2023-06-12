@@ -14,8 +14,8 @@ const background = css({
   bottom: 0,
   backgroundRepeat: "no-repeat",
   backgroundImage: `
-    radial-gradient(45% 50% at 45% 26%, #4031E880 0%, rgba(94, 34, 34, 0) 64.58%),
-    radial-gradient(45% 50% at 55% 37%, #F93C3C80 0%, rgba(94, 34, 34, 0) 64.58%)
+    radial-gradient(25% 50% at 45% 26%, #4031E85E 0%, rgba(94, 34, 34, 0) 64.58%),
+    radial-gradient(25% 50% at 55% 37%, #F93C3C5E 0%, rgba(94, 34, 34, 0) 64.58%)
   `
 });
 
