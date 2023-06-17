@@ -1,4 +1,4 @@
-import { styled } from "../app/styled";
+import { styled } from "../app/design";
 
 const Box = styled("div", {});
 
